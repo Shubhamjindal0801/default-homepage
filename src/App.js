@@ -17,18 +17,6 @@ function App() {
     setSearch(transcript)
   }, [listening])
 
-  useEffect(()=>{
-    document.getElementById('search').focus();
-  },[])
-
-  useEffect(()=>{
-    if(search.trim() !== ''){
-      setTimeout(()=>{
-        searchOnGoogle()
-      },1000)
-    }
-  },[search])
-
   if (!browserSupportsSpeechRecognition) {
     return null
   }
