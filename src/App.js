@@ -17,6 +17,10 @@ function App() {
     setSearch(transcript)
   }, [listening])
 
+  useEffect(()=>{
+    document.getElementById('search').focus()
+  },[])
+
   if (!browserSupportsSpeechRecognition) {
     return null
   }
