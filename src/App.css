@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("https://wallpapercave.com/wp/wp4566581.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+}
+.search-bar input{
+    padding: 1rem;
+    border-radius:4rem;
+    font-size: 1rem;
+    border:none;
+    width: 80%;
+}
+.search-bar input:focus{
+    outline:none;
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:10px;
+    width: 110%;
+}
+#search{
+    border: none;
+}
+#search:focus{
+    outline: none;
+}
+.search-bar button{
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #ccc;
+    color:#000;
+    font-weight: bold;
+    font-size: 1rem;
+    font-style: italic;
+}
+.faviroutes{
+    display: flex;
+    gap: 0.5rem;
+}
+.faviroutes a button{
+    padding: 10px;
+    border-radius: 1rem;
+    border: none;
+    background-color: #ccc;
+    color:#000;
+    font-weight: bold;
+    font-size: 1rem;
+    font-style: italic;
+}
+.faviroutes a button:hover,.search-bar button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mic-icon{
+    font-size: 1.5rem !important;
+    margin-left: -4rem;
 }
