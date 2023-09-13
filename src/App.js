@@ -21,13 +21,13 @@ function App() {
     document.getElementById('search').focus();
   },[])
 
-  useEffect(()=>{
+  /*useEffect(()=>{
     if(search.trim() !== ''){
       setTimeout(()=>{
         searchOnGoogle()
       },1000)
     }
-  },[search])
+  },[search])*/
 
   if (!browserSupportsSpeechRecognition) {
     return null
