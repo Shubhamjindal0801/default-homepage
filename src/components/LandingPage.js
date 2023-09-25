@@ -88,7 +88,7 @@ function LandingPage() {
       try{
         let newSearch ={
           title:search,
-          time: new Date.now()
+          time: new Date()
         }
         const docRef = await addDoc(
           collection(db, `users/${user.uid}/history`),
