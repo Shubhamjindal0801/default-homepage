@@ -87,7 +87,7 @@ function LandingPage() {
       setAudioInput(false);
       try{
         let newSearch ={
-          title:search,
+          searchTitle:search,
           time: new Date()
         }
         const docRef = await addDoc(
