@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    background: url("https://wallpapercave.com/wp/wp4566581.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+.search-bar input{
+    padding: 1rem;
+    border-radius:4rem;
+    font-size: 1rem;
+    border:none;
+    width: 40%;
+}
+.search-bar input:focus{
+    outline:none;
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+    width: 70%;
+}
+#search{
+    border: none;
+}
+#search:focus{
+    outline: none;
+}
+.search-bar button{
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #ccc;
+    color:#000;
+    font-weight: bold;
+    font-size: 1rem;
+    font-style: italic;
+}
+.faviroutes{
+    display: flex;
+    gap: 0.5rem;
+    width: 35%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.faviroutes button{
+    padding: 10px;
+    border-radius: 1rem;
+    border: none;
+    background-color: #ccc;
+    color:#000;
+    font-weight: bold;
+    font-size: 1rem;
+    font-style: italic;
+}
+.faviroutes button:hover,.add-bookmark-btn:hover,.search-bar button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.add-bookmark-btn{
+    position:absolute;
+    background-color: rgb(130, 130, 214) !important;
+    color: #fff !important;
+    padding: 10px;
+    border-radius: 1rem;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    font-style: italic;
+    bottom: 5rem;
+}
+
+.mic-icon{
+    font-size: 1.5rem !important;
+    margin-left: -4rem;
+}
+
+
+
+
+/* // ---------------------- */
+
+.user-container{
+    position: absolute;
+    top:20px;
+    right: 20px;
+}
+.navbar {
+    background-color: var(--theme);
+    padding: 0.8rem 1.5rem;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0
+  }
+  
+  .link {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  
+  .link:hover {
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  
+  .logout-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--white);
+  }
+  
+  .logout-logo span {
+    opacity: 0.5;
+  }
+  
+  .logout-logo span:hover {
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  
+  .user-img {
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    /* margin-right: 0.3rem; */
+  }
+  
+  /* @media (max-width: 767px) {
+    .navbar {
+      flex-direction: row;
+    }
+  
+    .logo {
+      font-size: 0.9rem;
+    }
+  
+    .logout-logo {
+      margin-top: 10px;
+    }
+  
+    .user-img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+  @media (max-width:416px) {
+    .navbar {
+      width: 100%;
+    }
+  } */

@@ -1,80 +1,68 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: url("https://wallpapercave.com/wp/wp4566581.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+/* styles.css */
 
-.container{
+/* Common styles for both desktop and mobile */
+.chart-container {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    gap:50px;
-}
-.search-bar input{
-    padding: 1rem;
-    border-radius:4rem;
-    font-size: 1rem;
-    border:none;
-    width: 80%;
-}
-.search-bar input:focus{
-    outline:none;
-}
-.search-bar{
-    display: flex;
-    align-items: center;
+  }
+  
+  .chart-wrapper {
+    width: 80%; /* You can adjust the width of the line chart as per your preference */
+    max-width: 900px; /* Set a maximum width for the line chart */
+    height: auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
     justify-content: space-between;
-    gap:10px;
-    width: 110%;
-}
-#search{
-    border: none;
-}
-#search:focus{
-    outline: none;
-}
-.search-bar button{
-    padding: 1rem;
-    border-radius: 1rem;
-    border: none;
-    background-color: #ccc;
-    color:#000;
-    font-weight: bold;
-    font-size: 1rem;
-    font-style: italic;
-}
-.faviroutes{
-    display: flex;
-    gap: 0.5rem;
-}
-.faviroutes a button{
-    padding: 10px;
-    border-radius: 1rem;
-    border: none;
-    background-color: #ccc;
-    color:#000;
-    font-weight: bold;
-    font-size: 1rem;
-    font-style: italic;
-}
-.faviroutes a button:hover,.search-bar button:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-.mic-icon{
-    font-size: 1.5rem !important;
-    margin-left: -4rem;
-}
+    margin: 1rem 1rem 3rem 1.5rem;
+  }
+  
+  .chart-wrapper2 {
+    width: 80%; /* You can adjust the width of the pie chart as per your preference */
+    max-width: 350px; /* Set a maximum width for the pie chart */
+    height: auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    justify-content: space-between;
+    margin: 1rem 1rem 3rem 1rem;
+  }
+  @media screen and (max-width: 758px) {
+    body{
+  overflow-x: hidden;
+    }
+    .chart-container {
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 90vw;
+      margin: 2rem;
+    }
+    
+    .chart-wrapper,
+    .chart-wrapper2 {
+      width: 80vw;
+      margin-bottom: 2rem;
+      /* margin: 1.5rem; */
+    }
+  }
+  /* Styles for desktop view */
+  @media screen and (max-width: 1000px) {
+    .chart-container {
+      margin: 2rem;
+      /* width: 76vw; */
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    body{
+      overflow-x: hidden;
+        } 
+    .chart-wrapper,
+    .chart-wrapper2 {
+      width: 80vw;
+      margin-bottom: 2rem;
+      /* margin: 1.5rem; */
+    }
+  }
+  

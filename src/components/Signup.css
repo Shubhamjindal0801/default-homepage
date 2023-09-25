@@ -1,0 +1,39 @@
+.main-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+.signup-container{
+    width: 100%;
+    max-width: 350px;
+    /* min-width: 300px !important; */
+    height: auto;
+    box-shadow:  var(--shadow);
+    border-radius: 1rem;
+    padding: 1rem 2rem; 
+}
+.title{
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.login-anchor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width: 758px) {
+
+    .main-body{
+      /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:auto;
+    }
+  
+  }
