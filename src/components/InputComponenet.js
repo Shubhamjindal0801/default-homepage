@@ -5,7 +5,7 @@ import './InputComponent.css'
 function InputComponent({label,state,setState,placeholder,type}) {
     return (
         <div className='input-container'>
-            <p className='label-input'>{label}</p>
+            <p className='label-input'>{label}<span style={{ color: '#DD4A3D' }}>*</span></p>
             <input
             required
             value={state}

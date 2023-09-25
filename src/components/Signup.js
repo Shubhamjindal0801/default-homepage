@@ -12,6 +12,7 @@ import { useNavigate } from "react-router";
 import InputComponent from './InputComponenet'
 import Button from './Button'
 import { toast } from 'react-toastify'
+import Header from "./Header";
 
 function Signup() {
   const [name, setName] = useState("");
@@ -128,6 +129,7 @@ function googleAuth(){
 
 return (
   <div className="main-body">
+    <Header />
       {login ? <>
           <div className="signup-container">
               <h2 className="title">Login</h2>

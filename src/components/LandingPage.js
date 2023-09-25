@@ -12,12 +12,13 @@ import UserSvg from "./user.svg";
 import { addDoc, collection, getDocs, query } from "firebase/firestore";
 import { doc, deleteDoc,updateDoc } from "firebase/firestore";
 import {ref,remove} from 'firebase/database'
+import Header from "./Header";
 
 function LandingPage() {
   const [search, setSearch] = useState("");
   const [listening, setListening] = useState(false);
   const [audioInput, setAudioInput] = useState(false);
-  const [user] = useAuthState(auth);
+  const [user,loading] = useAuthState(auth);
   const [photoUrl, setPhotoUrl] = useState("");
   const [bookmarks, setBookmarks] = useState([]);
   const [searchHistory, setSearchHistory] = useState([]);
@@ -26,14 +27,15 @@ function LandingPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log('User Ussefect',user)
+    console.log('User',user)
+    document.getElementById("search").focus();
     if (user) {
       setPhotoUrl(user.photoURL);
       console.log("user>>", user);
       console.log("photo>>", user.photoURL);
       navigate("/landing");
     }
-  }, []);
+  },[user,loading]);
   useEffect(() => {
     fetchBookmarks();
   }, [user]);
@@ -63,9 +65,6 @@ function LandingPage() {
     setSearch(transcript);
   }, [listening]);
 
-  useEffect(() => {
-    document.getElementById("search").focus();
-  }, []);
 
   useEffect(() => {
     if (audioInput) {
@@ -99,7 +98,6 @@ function LandingPage() {
         newArray.unshift(newSearch)
         setSearchHistory(newArray)
         console.log(searchHistory)
-        toast.success("Search added successfully");
       }catch(e){
         toast.error(e.message)
       }
@@ -185,8 +183,13 @@ function LandingPage() {
     }
   }
 
+  function handleListening() {
+    window.open(`http://google.com/search?q=${search}`)
+  }
+
   return (
     <div class="container">
+      <Header />
       <div className="user-container">
         {user && (
           <div class="logout-logo">
